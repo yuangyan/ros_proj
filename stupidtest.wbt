@@ -1,0 +1,60 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.993061727059197 -0.11307532256968249 -0.032285874248145933 0.5599370941877719
+  position -4.882206347441038 29.626504106577134 58.442549516690406
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 50 50
+  floorTileSize 10 10
+  floorAppearance Parquetry {
+    type "light strip"
+  }
+  wallHeight 0.5
+}
+DEF PIONEER3AT Pioneer3at {
+  translation 10 0.11 10
+  name "Pioneer 3-AT(1)"
+  controller "ros"
+  controllerArgs [
+    "--name=ranger"
+  ]
+  extensionSlot [
+    InertialUnit {
+    }
+    GPS {
+    }
+  ]
+}
+DEF PIONEER3AT Pioneer3at {
+  translation -10 0 -10
+  controller "ros"
+  controllerArgs [
+    "--name=yya"
+  ]
+  extensionSlot [
+    InertialUnit {
+    }
+    GPS {
+    }
+  ]
+}
+DEF PIONEER3AT Pioneer3at {
+  name "Pioneer 3-AT(2)"
+  controller "ros"
+  controllerArgs [
+    "--name=master"
+  ]
+  extensionSlot [
+    InertialUnit {
+    }
+    GPS {
+    }
+  ]
+}
